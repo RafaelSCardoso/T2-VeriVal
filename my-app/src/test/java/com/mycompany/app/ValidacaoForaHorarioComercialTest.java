@@ -37,7 +37,7 @@ public class ValidacaoForaHorarioComercialTest {
         itens.add(new ItemVenda(2,30,3,2000));
         itens.add(new ItemVenda(3,50,1,1500));
 
-        RegraValidacao regra = new ValidacaoHorarioComercial();
+        RegraValidacao regra = new ValidacaoForaHorarioComercial();
         assertDoesNotThrow(()->regra.valida(produtos,estoque,itens));
     }
     
