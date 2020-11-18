@@ -44,6 +44,6 @@ public class RegraImpostoComprasGrandesTeste {
         RegraImposto regraImposto = new RegraImpostoComprasGrandes();
         double imposto = regraImposto.calcula(itens);
 
-        assertEquals(imposto, /*alguma coisa*/);
+        assertEquals(imposto, 9.0);
     }
 }
