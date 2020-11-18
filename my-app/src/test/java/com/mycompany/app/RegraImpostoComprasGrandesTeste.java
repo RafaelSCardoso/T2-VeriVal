@@ -44,6 +44,19 @@ public class RegraImpostoComprasGrandesTeste {
         RegraImposto regraImposto = new RegraImpostoComprasGrandes();
         double imposto = regraImposto.calcula(itens);
 
-        assertEquals(imposto, 9.0);
+        assertEquals(imposto, 10.0);
+    }
+
+    @Test
+    public void calcula_tresItens() {
+        List<ItemVenda> itens = new ArrayList<>();
+        itens.add(123, 456, 3, 10.0);
+        itens.add(123, 456, 2, 10.0);
+        itens.add(123, 456, 1, 10.0);
+
+        RegraImposto regraImposto = new RegraImpostoComprasGrandes();
+        double imposto = regraImposto.calcula(itens);
+
+        assertEquals(imposto, 6.0);
     }
 }
