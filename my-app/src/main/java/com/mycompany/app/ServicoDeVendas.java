@@ -1,3 +1,5 @@
+package com.bcopstein;
+
 import java.util.List;
 
 public class ServicoDeVendas {
@@ -18,22 +20,21 @@ public class ServicoDeVendas {
     }
 
     public Integer calculaSubtotal(List<ItemVenda> itens) {
-        // TO DO:
-        return 0;
+        return (int) (itens.stream().mapToDouble(it -> it.getValorVendido()).sum());
     }
 
     public Integer calculaImpostos(List<ItemVenda> itens) {
-        // TO DO:
-        return 0;
+        return (int) regraImposto.calcular(itens);
     }
 
     public Integer calculaPrecoFinal(List<ItemVenda> itens) {
-        // TO DO:
-        return 0;
+        return calculaSubtotal(itens) + calculaImpostos(itens);
     }
 
     public Integer[] todosValores(List<ItemVenda> itens) {
-         // TO DO:
-         return null;
+        Integer[] valores = new Integer[3];
+        valores[0] = calculaSubtotal(itens);
+        valores[1] = calculaImpostos(itens);
+        return valores;
     }
 }

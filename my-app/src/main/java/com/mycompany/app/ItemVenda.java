@@ -1,3 +1,5 @@
+package com.bcopstein;
+
 public class ItemVenda {
     private int nro;
     private int codigoProduto;

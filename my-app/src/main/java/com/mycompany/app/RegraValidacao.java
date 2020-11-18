@@ -1,3 +1,5 @@
+package com.bcopstein;
+
 import java.util.List;
 
 public interface RegraValidacao {

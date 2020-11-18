@@ -1,3 +1,5 @@
+package com.bcopstein;
+
 public class SistVendasException extends IllegalArgumentException {
     private static final long serialVersionUID = 1L;
 
