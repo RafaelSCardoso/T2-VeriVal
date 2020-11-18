@@ -9,7 +9,6 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import jdk.internal.jline.internal.TestAccessible;
 
 public class ValidacaoForaHorarioComercialTest {
 
