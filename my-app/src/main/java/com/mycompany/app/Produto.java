@@ -1,4 +1,4 @@
-package com.bcopstein;
+package com.mycompany.app;
 
 public class Produto {
   private int codigo;

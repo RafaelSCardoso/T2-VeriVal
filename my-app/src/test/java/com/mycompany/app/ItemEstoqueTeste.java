@@ -1,6 +1,8 @@
 package com.mycompany.app;
 
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -19,7 +21,8 @@ public class ItemEstoqueTeste {
     })
     public void testeItemEstoqueEntrada(int codigo, int quantidade,int valor) {
         ItemEstoque item = new ItemEstoque(codigo, quantidade);
-        Assertions.assertEquals(item.entrada(quantidade), quantidade + valor);
+        item.entrada(quantidade);
+        Assertions.assertEquals(item.disponivel(quantidade), quantidade + valor);
     }
     
     @ParameterizedTest
@@ -33,7 +36,8 @@ public class ItemEstoqueTeste {
     })
     public void testeItemEstoqueSaida(int codigo, int quantidade, int valor) {
         ItemEstoque item = new ItemEstoque(codigo, quantidade);
-        Assertions.assertEquals(item.saida(quantidade), quantidade - valor);
+        item.saida(quantidade);
+        Assert.assertEquals(item.disponivel(quantidade), (quantidade - valor));
         
     }
     
@@ -46,6 +50,6 @@ public class ItemEstoqueTeste {
     })
     public void testeItemEstoqueDisponivel(int codigo, int quantidade) {
         ItemEstoque item = new ItemEstoque(codigo, quantidade);
-        Assertions.assertEquals(item.disponivel(quantidade), quantidade);
+        assertEquals(item.disponivel(quantidade), quantidade);
     }
 }

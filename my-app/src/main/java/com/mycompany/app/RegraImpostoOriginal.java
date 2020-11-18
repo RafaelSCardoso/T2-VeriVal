@@ -1,4 +1,4 @@
-package com.bcopstein;
+package com.mycompany.app;
 
 import java.util.List;
 
