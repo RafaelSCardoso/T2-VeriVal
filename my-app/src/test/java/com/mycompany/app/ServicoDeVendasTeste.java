@@ -119,7 +119,7 @@ public class ServicoDeVendasTeste {
     public void todosValores_listaVazia() {
         ServicoDeVendas service = new ServicoDeVendas(produtos, estoque, regraImposto, factoryValidacao);
         List<ItemVenda> itens = new ArrayList<>();
-        when(regraImposto.calcular).thenReturn(27);
+        when(regraImposto.calcular(anyList())).thenReturn(27);
 
         Integer[] todosValores = service.todosValores(itens);
 
