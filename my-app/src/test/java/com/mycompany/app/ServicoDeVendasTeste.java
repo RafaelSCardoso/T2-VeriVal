@@ -1,14 +1,17 @@
 package com.mycompany.app;
 
+import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.mockito.Mock;
 
 public class ServicoDeVendasTeste {
 
@@ -87,7 +90,7 @@ public class ServicoDeVendasTeste {
     public void calculaPrecoFinal_() {
         ServicoDeVendas service = new ServicoDeVendas(produtos, estoque, regraImposto, factoryValidacao);
         List<ItemVenda> itens = new ArrayList<>();
-        when(regraImposto.calcular(anyList())).thenReturn(27);
+        when(regraImposto.calcular).thenReturn(27);
 
         itens.add(new ItemVenda(001, 123, 5, 10.0));
         itens.add(new ItemVenda(002, 234, 2, 40.0));
@@ -102,7 +105,7 @@ public class ServicoDeVendasTeste {
     public void todosValores_() {
         ServicoDeVendas service = new ServicoDeVendas(produtos, estoque, regraImposto, factoryValidacao);
         List<ItemVenda> itens = new ArrayList<>();
-        when(regraImposto.calcular(anyList())).thenReturn(27);
+        when(regraImposto.calcular(itens)).thenReturn((double) 27);
 
         itens.add(new ItemVenda(001, 123, 5, 10.0));
         itens.add(new ItemVenda(002, 234, 2, 40.0));
@@ -119,7 +122,7 @@ public class ServicoDeVendasTeste {
     public void todosValores_listaVazia() {
         ServicoDeVendas service = new ServicoDeVendas(produtos, estoque, regraImposto, factoryValidacao);
         List<ItemVenda> itens = new ArrayList<>();
-        when(regraImposto.calcular(anyList())).thenReturn(27);
+        when(regraImposto.calcular).thenReturn(27);
 
         Integer[] todosValores = service.todosValores(itens);
 
