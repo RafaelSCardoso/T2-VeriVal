@@ -87,7 +87,7 @@ public class ServicoDeVendasTeste {
     public void calculaPrecoFinal_() {
         ServicoDeVendas service = new ServicoDeVendas(produtos, estoque, regraImposto, factoryValidacao);
         List<ItemVenda> itens = new ArrayList<>();
-        when(regraImposto.calcular).thenReturn(27);
+        when(regraImposto.calcular(anyList())).thenReturn(27);
 
         itens.add(new ItemVenda(001, 123, 5, 10.0));
         itens.add(new ItemVenda(002, 234, 2, 40.0));
@@ -102,7 +102,7 @@ public class ServicoDeVendasTeste {
     public void todosValores_() {
         ServicoDeVendas service = new ServicoDeVendas(produtos, estoque, regraImposto, factoryValidacao);
         List<ItemVenda> itens = new ArrayList<>();
-        when(regraImposto.calcular).thenReturn(27);
+        when(regraImposto.calcular(anyList())).thenReturn(27);
 
         itens.add(new ItemVenda(001, 123, 5, 10.0));
         itens.add(new ItemVenda(002, 234, 2, 40.0));
