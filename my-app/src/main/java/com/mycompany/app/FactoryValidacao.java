@@ -10,7 +10,7 @@ public class FactoryValidacao {
         this.agora = agora;
     }
 
-    public RegraValidacao getRegraValidacao(Produtos produtos, Estoque estoque, List<ItemVenda> itens) throws SistVendasException{
+    public RegraValidacao getRegraValidacao(){
         if (LocalTime.parse("08:00").isAfter(agora) && LocalTime.parse("18:00").isBefore(agora)){
                 return new ValidacaoHorarioComercial();
         }else{
