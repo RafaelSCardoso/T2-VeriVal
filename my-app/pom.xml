@@ -16,12 +16,10 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-
     
     <sonar.projectKey>RafaelSCardoso_T2-VeriVal</sonar.projectKey>
     <sonar.organization>rafaelscardoso</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-    
   </properties>
 
   <dependencies>

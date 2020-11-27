@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: com.mycompany.app.ServicoDeVendasTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 3, Skipped: 0, Time elapsed: 0.078 s <<< FAILURE! - in com.mycompany.app.ServicoDeVendasTest
+calculaPrecoFinal_(com.mycompany.app.ServicoDeVendasTest)  Time elapsed: 0.004 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.mycompany.app.ServicoDeVendasTest.calculaPrecoFinal_(ServicoDeVendasTest.java:89)
+
+todosValores_(com.mycompany.app.ServicoDeVendasTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.mycompany.app.ServicoDeVendasTest.todosValores_(ServicoDeVendasTest.java:104)
+
+todosValores_listaVazia(com.mycompany.app.ServicoDeVendasTest)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.mycompany.app.ServicoDeVendasTest.todosValores_listaVazia(ServicoDeVendasTest.java:121)
+
+calculaSubtotal_(com.mycompany.app.ServicoDeVendasTest)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.AssertionError: expected:<190> but was:<270>
+	at com.mycompany.app.ServicoDeVendasTest.calculaSubtotal_(ServicoDeVendasTest.java:41)
+

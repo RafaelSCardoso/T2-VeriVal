@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
-public class RegraImpostoTeste {
+public class RegraImpostoTest {
 
     @Test
 
@@ -21,7 +21,7 @@ public class RegraImpostoTeste {
         RegraImpostoOriginal regraImposto = new RegraImpostoOriginal();
         double imposto = regraImposto.calcular(itens);
 
-        assertEquals(imposto, 21.00);
+        assertEquals(imposto, 21.00, 0.01);
     }
 
     @Test
@@ -37,6 +37,6 @@ public class RegraImpostoTeste {
         RegraImpostoOriginal regraImposto = new RegraImpostoOriginal();
         double imposto = regraImposto.calcular(itens);
 
-        assertEquals(imposto, 12.00);
+        assertEquals(imposto, 12.00, 0.01);
     }
 }

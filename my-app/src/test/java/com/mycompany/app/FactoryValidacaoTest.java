@@ -2,12 +2,11 @@ package com.mycompany.app;
 
 
 import java.time.LocalTime;
-
-import org.junit.jupiter.api.Assertions;
+import static org.junit.Assert.assertEquals;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class FactoryValidacaoTeste {
+public class FactoryValidacaoTest {
 
     @ParameterizedTest
     @CsvSource({
@@ -20,7 +19,7 @@ public class FactoryValidacaoTeste {
 
         FactoryValidacao factory = new FactoryValidacao(LocalTime.of(horas, minutos));
 
-        Assertions.assertEquals(factory.getRegraValidacao(), ValidacaoHorarioComercial.class);
+        assertEquals(factory.getRegraValidacao(), ValidacaoHorarioComercial.class);
 
     }
     
@@ -36,6 +35,6 @@ public class FactoryValidacaoTeste {
 
         FactoryValidacao factory = new FactoryValidacao(LocalTime.of(horas, minutos));
 
-        Assertions.assertEquals(factory.getRegraValidacao(), ValidacaoForaHorarioComercial.class);
+        assertEquals(factory.getRegraValidacao(), ValidacaoForaHorarioComercial.class);
     }
 }

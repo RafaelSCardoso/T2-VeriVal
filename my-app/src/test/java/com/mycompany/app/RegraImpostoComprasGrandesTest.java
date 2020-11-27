@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-public class RegraImpostoComprasGrandesTeste {
+public class RegraImpostoComprasGrandesTest {
 
     @Test
 
@@ -22,7 +22,7 @@ public class RegraImpostoComprasGrandesTeste {
         RegraImpostoComprasGrandes regraImposto = new RegraImpostoComprasGrandes();
         double imposto = regraImposto.calcular(itens);
 
-        assertEquals(imposto, 17.25);
+        assertEquals(imposto, 17.25, 0.01);
     }
 
     @Test
@@ -38,6 +38,6 @@ public class RegraImpostoComprasGrandesTeste {
         RegraImpostoComprasGrandes regraImposto = new RegraImpostoComprasGrandes();
         double imposto = regraImposto.calcular(itens);
 
-        assertEquals(imposto, 10.00);
+        assertEquals(imposto, 10.00, 0.01);
     }
 }
