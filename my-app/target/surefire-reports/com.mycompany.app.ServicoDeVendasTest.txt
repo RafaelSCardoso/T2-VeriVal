@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.mycompany.app.ServicoDeVendasTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 1, Errors: 3, Skipped: 0, Time elapsed: 0.078 s <<< FAILURE! - in com.mycompany.app.ServicoDeVendasTest
-calculaPrecoFinal_(com.mycompany.app.ServicoDeVendasTest)  Time elapsed: 0.004 s  <<< ERROR!
+Tests run: 5, Failures: 1, Errors: 3, Skipped: 0, Time elapsed: 0.079 s <<< FAILURE! - in com.mycompany.app.ServicoDeVendasTest
+calculaPrecoFinal_(com.mycompany.app.ServicoDeVendasTest)  Time elapsed: 0.008 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.mycompany.app.ServicoDeVendasTest.calculaPrecoFinal_(ServicoDeVendasTest.java:89)
 
